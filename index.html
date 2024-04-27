@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product preview</title>
+    <style>
+        body{
+            background-image: url(./45398.png);
+        }
+        .main-img{
+        height: 500px;
+        border: 10px double black;
+        padding: 10px;
+        display: block;
+        margin: 0px auto;
+        }
+        .sec-img{
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            border: 3px solid black;
+        }
+        .product-img{
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 0px 200px;
+        }
+        .heading{
+            color: #dc143c;
+            text-align: center;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1 class="heading">Shelby Mustang 2024</h1>
+    <img src="./2024-Shelby-Super-Snake-009-1080.jpg" class="main-img" id="main-img">
+
+    <div class="product-img">
+        <img src="./2024-Shelby-Super-Snake-001-1080.jpg" class="sec-img" onclick="changeimg(1)">
+        <img src="./2024-Shelby-Super-Snake-002-1080.jpg" class="sec-img" onclick="changeimg(2)">
+        <img src="./2024-Shelby-Super-Snake-003-1080.jpg"class="sec-img" onclick="changeimg(3)">
+        <img src="./2024-Shelby-Super-Snake-004-1080.jpg" class="sec-img" onclick="changeimg(4)">
+    </div>
+
+    <script>
+        function changeimg(num){
+            const mainimage=document.getElementById('main-img');
+
+            if(num==1){
+                mainimage.src = "./2024-Shelby-Super-Snake-001-1080.jpg";
+            }else if(num==2){
+                mainimage.src = "./2024-Shelby-Super-Snake-002-1080.jpg";
+
+            }else if(num==3){
+                mainimage.src = "./2024-Shelby-Super-Snake-003-1080.jpg";
+
+            }else if(num==4){
+                mainimage.src = "./2024-Shelby-Super-Snake-004-1080.jpg";
+
+            }
+        }
+    </script>
+</body>
+</html>
